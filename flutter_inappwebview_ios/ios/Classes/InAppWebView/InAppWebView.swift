@@ -729,9 +729,9 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
             let oldContentOffset = change?[.oldKey] as? CGPoint
             let startedByUser = scrollView.isDragging || scrollView.isDecelerating
             if newContentOffset != oldContentOffset {
-                DispatchQueue.main.async {
-                    self.onScrollChanged(startedByUser: startedByUser, oldContentOffset: oldContentOffset)
-                }
+                // DispatchQueue.main.async {
+                //     self.onScrollChanged(startedByUser: startedByUser, oldContentOffset: oldContentOffset)
+                // }
             }
         } else if keyPath == #keyPath(UIScrollView.contentSize) {
             if let newContentSize = change?[.newKey] as? CGSize,
